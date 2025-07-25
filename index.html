@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0%;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outliner{
+
+            background-color: blanchedalmond;
+            border: 5px solid rgb(78, 14, 54);
+            height: max-content;
+            width: max-content;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+         .rows{
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            justify-content: center;
+         }
+         .screen{
+            background-color: rgb(80, 74, 74);
+            height: 100px;
+            width: 100%;
+            border-radius: 4px;
+         }
+        button{
+            width: 60px ;
+            height:60px;
+        }
+        button:hover{
+            background-color: grey;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outliner">
+   <div class="screen">
+
+   </div>
+   <div class="rows">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+   </div>
+
+   <div class="rows">
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+   </div>
+
+
+   <div class="rows">
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+   </div>
+
+   <div class="rows">
+    <button>0</button>
+   
+   </div>
+   
+
+   <div class="rows">
+    <button>/</button>
+    <button>+</button>
+    <button>-</button>
+   
+   </div>
+
+   <div class="rows">
+    <button>*</button>
+    <button>=</button>
+   </div>
+    </div>
+</body>
+</html>
