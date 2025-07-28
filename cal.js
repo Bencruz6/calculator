@@ -27,3 +27,31 @@ const operate = (a, b, c) => {
 
     }
 }
+
+
+//display
+
+
+
+
+
+const buttons = document.getElementsByClassName("num");
+
+// const display = function (e){
+
+//     const display = document.getElementById("sc").innerText;
+//     console.log(typeof(display))
+
+// }
+
+
+
+
+for (let i = 0; i < buttons.length; ++i) {
+    buttons[i].addEventListener("click", function () {
+
+        console.log("clicked", buttons[i].value);
+        var cont = document.getElementById("sc").innerText+=buttons[i].value;
+    })
+}
+

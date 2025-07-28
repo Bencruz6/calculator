@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
-        *{
+        * {
             margin: 0%;
         }
 
-        body{
+        body {
             height: 100vh;
             width: 100vw;
             display: flex;
@@ -17,7 +18,7 @@
             align-items: center;
         }
 
-        .outliner{
+        .outliner {
 
             background-color: blanchedalmond;
             border: 5px solid rgb(78, 14, 54);
@@ -28,69 +29,84 @@
             flex-direction: column;
             gap: 10px;
         }
-         .rows{
+
+        .rows {
             display: flex;
             width: 100%;
             gap: 10px;
             justify-content: center;
-         }
-         .screen{
+        }
+
+        .screen {
             background-color: rgb(80, 74, 74);
             height: 100px;
             width: 100%;
             border-radius: 4px;
-         }
-        button{
-            width: 60px ;
-            height:60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
         }
-        button:hover{
+
+        button {
+            width: 60px;
+            height: 60px;
+        }
+
+        button:hover {
             background-color: rgb(202, 147, 147);
         }
-        
     </style>
+
 </head>
+
 <body>
+
     <div class="outliner">
-   <div class="screen">
 
-   </div>
-   <div class="rows">
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-   </div>
+        <div class="screen" id="sc">
+            0
+        </div>
+        <div class="rows">
+            <button id="one" class="num" value="1">1</button>
+            <button id="two" class="num" value="2">2</button>
+            <button id="three" class="num" value="3">3</button>
+        </div>
 
-   <div class="rows">
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-   </div>
+        <div class="rows">
+            <button id="four" class="num" value="4">4</button>
+            <button id="five" class="num" value="5">5</button>
+            <button id="six" class="num" value="6">6</button>
+        </div>
 
 
-   <div class="rows">
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-   </div>
+        <div class="rows">
+            <button id="seven" value="7" class="num">7</button>
+            <button id="eight" value="8" class="num">8</button>
+            <button id="nine" value="9" class="num">9</button>
+        </div>
 
-   <div class="rows">
-    <button>0</button>
-   
-   </div>
-   
+        <div class="rows">
+            <button id="zero" value="0" class="num">0</button>
 
-   <div class="rows">
-    <button>/</button>
-    <button>+</button>
-    <button>-</button>
-   
-   </div>
+        </div>
 
-   <div class="rows">
-    <button>*</button>
-    <button>=</button>
-   </div>
+
+        <div class="rows">
+            <button id="divide" value="/" class="num">/</button>
+            <button id="add" value="+" class="num">+</button>
+            <button id="sub" value="-" class="num">-</button>
+
+        </div>
+
+        <div class="rows">
+            <button id="mult" value="*" class="num">*</button>
+            <button id="evaluate" value="=" class="num">=</button>
+            <button id="clear" value="clear" class="num">Clear</button>
+        </div>
     </div>
 </body>
+
+<script src="cal.js"></script>
+
 </html>
