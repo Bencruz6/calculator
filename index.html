@@ -7,63 +7,95 @@
     <title>Calculator</title>
     <style>
         * {
-            margin: 0%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
             height: 100vh;
             width: 100vw;
+            background: linear-gradient(135deg, #141e30, #243b55);
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .outliner {
-
-            background-color: blanchedalmond;
-            border: 5px solid rgb(78, 14, 54);
-            height: max-content;
-            width: max-content;
-            padding: 10px;
+            background: rgba(20, 20, 20, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            min-width: 320px;
+            max-width: 360px;
+        }
+
+        .screen {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #32ffb4;
+            height: 80px;
+            border-radius: 16px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 2.2rem;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            white-space: nowrap;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.8);
         }
 
         .rows {
             display: flex;
-            width: 100%;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .screen {
-            background-color: rgb(80, 74, 74);
-            height: 100px;
-            width: 100%;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
+            justify-content: space-between;
+            gap: 12px;
         }
 
         button {
-            width: 60px;
-            height: 60px;
-            border-radius: 20%;
+            flex: 1;
+            height: 65px;
+            border: none;
+            border-radius: 18px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(4px);
+        }
+
+        .num {
+            background: linear-gradient(145deg, #4f4f4f, #3a3a3a);
         }
 
         .op {
-            background-color: rgb(224, 224, 44);
+            background: linear-gradient(145deg, #f57c00, #ef6c00);
         }
 
-        .num{
-            background-color: aquamarine;
+        .eval {
+            background: linear-gradient(145deg, #43a047, #388e3c);
+        }
+
+        .clear {
+            background: linear-gradient(145deg, #d32f2f, #c62828);
         }
 
         button:hover {
-            background-color: rgb(202, 147, 147);
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        button:active {
+            transform: scale(0.97);
+            box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.5);
         }
     </style>
 
@@ -74,7 +106,7 @@
     <div class="outliner">
 
         <div class="screen" id="sc">
-            
+
         </div>
         <div class="rows">
             <button id="one" class="num" value="1">1</button>
